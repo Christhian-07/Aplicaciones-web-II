@@ -1,7 +1,7 @@
 
 
 //Declaramos todos los parametros 
-interface Producto {
+interface producto {
     idProducto: string;
     idServicio: string;
     email: string;
@@ -14,7 +14,7 @@ interface Producto {
 
 // exportamos muestro arreglo
 
-export const products: Producto[] = [
+export const products: producto[] = [
     {
         idProducto: "001",
         idServicio: "001",

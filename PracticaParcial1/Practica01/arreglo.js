@@ -1,4 +1,9 @@
 
+
+
+
+// con la entidades que yo voy a estar trabajando es la de 'product'=> Categories y Service
+
 //declaramos los arreglos de la tabla asignada "producto"
 const product = [{
     idProducto: "001",
