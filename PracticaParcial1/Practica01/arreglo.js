@@ -1,7 +1,8 @@
+zxcvn 
 
 
+// Nuestra pagina se va a llamar ArtConnect     qertyiuoklp[;'
 
-// Nuestra pagina se va a llamar ArtConnect 
 // con la entidades que yo voy a estar trabajando es la de 'product'=> Categories y Service
 
 //declaramos los arreglos de la tabla asignada "producto"

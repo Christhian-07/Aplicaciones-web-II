@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Category {
+  ID_CAT      Int      @id @default(autoincrement()) @map(name: "ID_CAT")
+  NAME        String?  @map(name: "NAME")
+  DESCRIPTION String?  @map(name: "DESCRIPTION")
+  products    Product[]
+}
+
+model Product {
+  ID_PRODUCT        Int       @id @default(autoincrement()) @map(name: "ID_PRODUCT")
+  ID_CAT            Int?      @map(name: "ID_CAT")
+  NAME              String?   @map(name: "NAME")
+  DESCRIPTION       String?   @map(name: "DESCRIPTION")
+  PRICE             String?   @map(name: "PRICE")
+  DATE_DESCRIPTION  String?   @map(name: "DATE_DESCRIPTION")
+  DATE_UPDATE       String?   @map(name: "DATE_UPDATE")
+  SERVICE           Boolean?  @map(name: "SERVICE")
+  category          Category? @relation(fields: [ID_CAT], references: [ID_CAT])
+  services          Service[]
+}
+
+model Service {
+  ID_SERVICE  Int       @id @default(autoincrement()) @map(name: "ID_SERVICE")
+  ID_PRODUCT  Int?      @map(name: "ID_PRODUCT")
+  DATE_START  DateTime? @map(name: "DATE_START")
+  DATE_END    DateTime? @map(name: "DATE_END")
+  product     Product?  @relation(fields: [ID_PRODUCT], references: [ID_PRODUCT])
+}
