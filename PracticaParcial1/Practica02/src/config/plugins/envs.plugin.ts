@@ -1,7 +1,7 @@
-import 'dotenv/config'
-import * as env from 'env-var'
+// import 'dotenv/config'
+// import * as env from 'env-var'
 
-export const envs = { 
-    DATABASE_URL: env.get('DATABASE_URL').required().asString(),
-    PORT: env.get('PORT').required().asPortNumber(),
-}
+// export const envs = {
+//     POSTGRES_URL: env.get('POSTGRES_URL').required().asString(),
+//     PORT: env.get('PORT').required().asPortNumber(),
+// }
